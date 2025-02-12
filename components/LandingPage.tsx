@@ -57,7 +57,7 @@ export default function LandingPage() {
           <div className="absolute w-[500px] h-[500px] bg-dark-green-light/30 rounded-full blur-[100px] -bottom-48 -right-24" />
         </div>
 
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container mx-auto px-2 py-16 relative z-10">
           {/* Logo */}
           <motion.div
             initial={{ y: -20, opacity: 0 }}
@@ -79,17 +79,17 @@ export default function LandingPage() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-8">
+            {/* <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-6">
               Trade With Charis FX Tranding Institute
-            </span>
+            </span> */}
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               Master Forex Trading
               <br />
-              <span className="text-gold">With Expert Guidance</span>
+              <span className="text-gold">With Bala Fransic</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-xl mx-auto">
               Join our premium trading community and learn from experienced professionals 
               who have mastered the forex market
             </p>
@@ -101,7 +101,7 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className="bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold flex items-center text-lg transition-colors"
               >
-                Start Your Journey
+                Chat With Us
                 <ArrowRight className="ml-2 w-5 h-5" />
               </a>
             </div>
@@ -120,23 +120,23 @@ export default function LandingPage() {
       >
         <div className="container mx-auto px-6">
           <div className="flex flex-col md:flex-row items-center gap-12">
-            <div className="md:w-1/2">
+            <div className="md:w-1/2 flex justify-center"> {/* Added flex justify-center */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
                 transition={{ delay: 0.3 }}
-                className="relative"
+                className="relative w-full max-w-lg mx-auto" /* Added max-w-lg and mx-auto */
               >
-                <div className="absolute rounded-lg opacity-10 blur-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-dark-green to-dark-green-light rounded-lg opacity-10 blur-lg transform -rotate-6" />
                 <img
                   src="../public/mentor-image.png"
                   alt="Founder"
                   width={500}
                   height={600}
-                  className="rounded-lg relative"
+                  className="rounded-lg relative w-full h-auto object-cover" /* Added object-cover and shadow */
                 />
-                <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
+                <div className="absolute bottom-6 left-4 right-4 bg-white/90">
                   <h3 className="font-bold text-dark-green">Mr Bala Fransic</h3>
                   <p className="text-sm text-gray-600">Founder & Head Trader</p>
                 </div>
