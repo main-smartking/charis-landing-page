@@ -90,7 +90,7 @@ export default function LandingPage() {
             className="flex justify-center mb-4"
           >
             <img
-              src="../public/charis-logo.png"
+              src="/charis-logo.png"
               alt="Forex Trading Logo"
               className="h-40 w-auto drop-shadow-lg"
             />
@@ -154,7 +154,7 @@ export default function LandingPage() {
               >
                 <div className="absolute inset-0 bg-gradient-to-r from-dark-green to-dark-green-light rounded-lg opacity-10 blur-lg transform -rotate-6" />
                 <img
-                  src="../public/mentor-image.png"
+                  src="/mentor-image.png"
                   alt="Founder"
                   width={500}
                   height={600}
