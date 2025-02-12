@@ -1,0 +1,28 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --dark-green: #1a472a;
+  --dark-green-light: #00695c;
+  --gold: #ffd700;
+}
+
+@layer utilities {
+  .bg-dark-green {
+    background-color: var(--dark-green);
+  }
+  .bg-dark-green-light {
+    background-color: var(--dark-green-light);
+  }
+  .bg-gold {
+    background-color: var(--gold);
+  }
+  .text-dark-green {
+    color: var(--dark-green);
+  }
+  .text-gold {
+    color: var(--gold);
+  }
+}
+

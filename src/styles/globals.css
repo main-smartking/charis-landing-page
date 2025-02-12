@@ -1,0 +1,17 @@
+/* Ensure Tailwind CSS is installed and configured correctly */
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+:root {
+  --dark-green: #1a472a;
+  --dark-green-light: #00695c;
+  --gold: #ffd700;
+}
+
+@layer base {
+  body {
+    background-color: var(--dark-green);
+    color: var(--gold);
+  }
+}
