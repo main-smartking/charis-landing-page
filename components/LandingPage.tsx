@@ -50,14 +50,38 @@ export default function LandingPage() {
     <main className="min-h-screen">
       {/* Hero Section */}
       <section className="relative min-h-screen flex items-center justify-center bg-dark-green overflow-hidden">
-        {/* Background Effects */}
-        <div className="absolute inset-0 bg-hero-pattern mix-blend-overlay" />
+        {/* Enhanced Background Effects */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,50,0,0.3)_0%,rgba(0,0,0,0.5)_100%)]" />
+        <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-20" />
         <div className="absolute inset-0">
-          <div className="absolute w-[500px] h-[500px] bg-dark-green-light/30 rounded-full blur-[100px] -top-48 -left-24" />
-          <div className="absolute w-[500px] h-[500px] bg-dark-green-light/30 rounded-full blur-[100px] -bottom-48 -right-24" />
+          {/* Animated gradient orbs */}
+          <motion.div
+            animate={{
+              scale: [1, 1.2, 1],
+              opacity: [0.3, 0.5, 0.3],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute w-[600px] h-[600px] bg-gradient-to-r from-dark-green-light to-gold/30 rounded-full blur-[120px] -top-48 -left-24"
+          />
+          <motion.div
+            animate={{
+              scale: [1.2, 1, 1.2],
+              opacity: [0.5, 0.3, 0.5],
+            }}
+            transition={{
+              duration: 8,
+              repeat: Infinity,
+              ease: "easeInOut"
+            }}
+            className="absolute w-[600px] h-[600px] bg-gradient-to-l from-dark-green-light to-gold/30 rounded-full blur-[120px] -bottom-48 -right-24"
+          />
         </div>
 
-        <div className="container mx-auto px-2 py-16 relative z-10">
+        <div className="container mx-auto px-2 py-4 relative z-10">
           {/* Logo */}
           <motion.div
             initial={{ y: -20, opacity: 0 }}
@@ -86,10 +110,10 @@ export default function LandingPage() {
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
               Master Forex Trading
               <br />
-              <span className="text-gold">With Bala Fransic</span>
+              <span className="text-gold">10X Faster Guidance!</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-xl mx-auto">
+            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl mx-auto">
               Join our premium trading community and learn from experienced professionals 
               who have mastered the forex market
             </p>
@@ -136,9 +160,9 @@ export default function LandingPage() {
                   height={600}
                   className="rounded-lg relative w-full h-auto object-cover" /* Added object-cover and shadow */
                 />
-                <div className="absolute bottom-6 left-4 right-4 bg-white/90">
-                  <h3 className="font-bold text-dark-green">Mr Bala Fransic</h3>
-                  <p className="text-sm text-gray-600">Founder & Head Trader</p>
+                <div className="absolute bottom-20 left-4 right-4 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+                  <h3 className="font-bold text-dark-green text-xl">Mr Bala Fransic</h3>
+                  <p className="text-gray-600">Founder & Head Trader</p>
                 </div>
               </motion.div>
             </div>
