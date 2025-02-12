@@ -79,5 +79,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": ""
+  "description": "",
+  "json.schemaDownload.enable": false
 }

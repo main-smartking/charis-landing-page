@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
 import { ChevronRight, Star, BookOpen, GraduationCap, ArrowRight } from "lucide-react"
-import Image from "next/image"
 
 const fadeIn = {
   hidden: { opacity: 0, y: 20 },
@@ -50,52 +49,64 @@ export default function LandingPage() {
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
-      <section className="min-h-screen bg-dark-green text-white">
-        <motion.div
-          className="container mx-auto px-6 text-center relative z-10"
-          initial="hidden"
-          animate="visible"
-          variants={fadeIn}
-        >
-          <motion.span
-            className="inline-block px-4 py-2 bg-white/10 rounded-full text-sm font-medium mb-8"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.3 }}
-          >
-            Transform Your Trading Journey
-          </motion.span>
+      <section className="relative min-h-screen flex items-center justify-center bg-dark-green overflow-hidden">
+        {/* Background Effects */}
+        <div className="absolute inset-0 bg-hero-pattern mix-blend-overlay" />
+        <div className="absolute inset-0">
+          <div className="absolute w-[500px] h-[500px] bg-dark-green-light/30 rounded-full blur-[100px] -top-48 -left-24" />
+          <div className="absolute w-[500px] h-[500px] bg-dark-green-light/30 rounded-full blur-[100px] -bottom-48 -right-24" />
+        </div>
 
-          <motion.div 
-            className="text-5xl md:text-7xl font-bold mb-8 leading-tight"
-            transition={{ delay: 0.3 }}>
-            <h1>
-              Master Forex Trading
-              <br />
-              With Expert Guidance
-            </h1>
+        <div className="container mx-auto px-4 py-16 relative z-10">
+          {/* Logo */}
+          <motion.div
+            initial={{ y: -20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex justify-center mb-4"
+          >
+            <img
+              src="../public/charis-logo.png"
+              alt="Forex Trading Logo"
+              className="h-40 w-auto drop-shadow-lg"
+            />
           </motion.div>
 
-          <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-3xl mx-auto">
-            Join our premium trading community and learn from experienced professionals who have mastered the forex
-            market
-          </p>
+          {/* Hero Content */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-center max-w-4xl mx-auto"
+          >
+            <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-8">
+              Trade With Charis FX Tranding Institute
+            </span>
 
-          <div className="flex flex-wrap gap-6 justify-center">
-            <a
-              href="https://wa.me/2347011299203"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold flex items-center text-lg transition-colors"
-            >
-              Start Your Journey
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </a>
-            <button className="border-2 border-white/80 hover:bg-white/10 px-8 py-4 rounded-lg font-semibold flex items-center text-lg transition-colors">
-              Watch Demo
-            </button>
-          </div>
-        </motion.div>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+              Master Forex Trading
+              <br />
+              <span className="text-gold">With Expert Guidance</span>
+            </h1>
+
+            <p className="text-lg md:text-xl text-gray-200 mb-12 max-w-2xl mx-auto">
+              Join our premium trading community and learn from experienced professionals 
+              who have mastered the forex market
+            </p>
+
+            <div className="flex flex-wrap gap-6 justify-center">
+              <a
+                href="https://wa.me/2347011299203"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold flex items-center text-lg transition-colors"
+              >
+                Start Your Journey
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </a>
+            </div>
+          </motion.div>
+        </div>
       </section>
 
       {/* Founder Section */}
@@ -117,16 +128,16 @@ export default function LandingPage() {
                 transition={{ delay: 0.3 }}
                 className="relative"
               >
-                <div className="absolute -inset-4 bg-gradient-to-r from-dark-green to-dark-green-light rounded-lg opacity-10 blur-lg" />
+                <div className="absolute rounded-lg opacity-10 blur-lg" />
                 <img
-                  src="/placeholder.svg"
+                  src="../public/mentor-image.png"
                   alt="Founder"
-                  width={400}
-                  height={500}
-                  className="rounded-lg shadow-xl relative"
+                  width={500}
+                  height={600}
+                  className="rounded-lg relative"
                 />
                 <div className="absolute bottom-4 left-4 right-4 bg-white/90 backdrop-blur-sm p-4 rounded-lg shadow-lg">
-                  <h3 className="font-bold text-dark-green">David Thompson</h3>
+                  <h3 className="font-bold text-dark-green">Mr Bala Fransic</h3>
                   <p className="text-sm text-gray-600">Founder & Head Trader</p>
                 </div>
               </motion.div>

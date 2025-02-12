@@ -2,15 +2,17 @@
 module.exports = {
   darkMode: ["class"],
   content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
     "./app/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
+    "./components/**/*.{js,ts,jsx,tsx}"
   ],
   theme: {
     extend: {
       colors: {
-        "dark-green": "var(--dark-green)",
-        "dark-green-light": "var(--dark-green-light)",
-        gold: "var(--gold)",
+        "dark-green": "#1a472a",
+        "dark-green-light": "#2a613f",
+        gold: "#ffd700",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -50,6 +52,9 @@ module.exports = {
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
       },
+      boxShadow: {
+        glow: "0 0 50px -12px rgba(255, 215, 0, 0.25)",
+      }
     },
   },
   plugins: [],
