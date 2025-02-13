@@ -48,88 +48,66 @@ const testimonials = [
 export default function LandingPage() {
   return (
     <main className="min-h-screen">
-      {/* Hero Section */}
+      {/* Hero Section - Simplified animations */}
       <section className="relative min-h-screen flex items-center justify-center bg-dark-green overflow-hidden">
-        {/* Enhanced Background Effects */}
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(0,50,0,0.3)_0%,rgba(0,0,0,0.5)_100%)]" />
-        <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-20" />
-        <div className="absolute inset-0">
-          {/* Animated gradient orbs */}
-          <motion.div
-            animate={{
-              scale: [1, 1.2, 1],
-              opacity: [0.3, 0.5, 0.3],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute w-[600px] h-[600px] bg-gradient-to-r from-dark-green-light to-gold/30 rounded-full blur-[120px] -top-48 -left-24"
-          />
-          <motion.div
-            animate={{
-              scale: [1.2, 1, 1.2],
-              opacity: [0.5, 0.3, 0.5],
-            }}
-            transition={{
-              duration: 8,
-              repeat: Infinity,
-              ease: "easeInOut"
-            }}
-            className="absolute w-[600px] h-[600px] bg-gradient-to-l from-dark-green-light to-gold/30 rounded-full blur-[120px] -bottom-48 -right-24"
-          />
-        </div>
+        {/* Simplified background effects */}
+        <div className="absolute inset-0 bg-gradient-to-b from-dark-green-light to-dark-green opacity-50" />
+        <div className="absolute inset-0 bg-[url('/grid-pattern.png')] opacity-10" />
+        
+        {/* Single subtle animated gradient */}
+        <motion.div
+          animate={{
+            opacity: [0.3, 0.4, 0.3],
+          }}
+          transition={{
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut"
+          }}
+          className="absolute w-full h-full bg-gradient-to-r from-dark-green-light/20 to-gold/10 blur-3xl"
+        />
 
-        <div className="container mx-auto px-2 py-4 relative z-10">
+        <div className="container mx-auto px-4 sm:px-6 py-10 relative z-10">
           {/* Logo */}
           <motion.div
-            initial={{ y: -20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
-            className="flex justify-center mb-4"
+            className="flex justify-center mb-8 md:mb-12"
           >
             <img
               src="/charis-logo.png"
               alt="Forex Trading Logo"
-              className="h-40 w-auto drop-shadow-lg"
+              className="h-32 md:h-40 w-auto"
             />
           </motion.div>
 
-          {/* Hero Content */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="text-center max-w-4xl mx-auto"
-          >
-            {/* <span className="inline-block px-6 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-medium text-white mb-6">
-              Trade With Charis FX Tranding Institute
-            </span> */}
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-8 leading-tight">
+          {/* Hero Content - Improved mobile typography */}
+          <div className="text-center max-w-4xl mx-auto px-4">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 md:mb-8 leading-tight tracking-tight">
               Master Forex Trading
               <br />
               <span className="text-gold">10X Faster Guidance!</span>
             </h1>
 
-            <p className="text-lg md:text-xl text-gray-200 mb-6 max-w-2xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl text-gray-200 mb-6 max-w-2xl mx-auto">
               Join our premium trading community and learn from experienced professionals 
               who have mastered the forex market
             </p>
 
-            <div className="flex flex-wrap gap-6 justify-center">
+            {/* Mobile-optimized CTA button */}
+            <div className="flex justify-center">
               <a
                 href="https://wa.me/2347011299203"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold flex items-center text-lg transition-colors"
+                className="w-full mx-auto sm:w-auto bg-gold hover:bg-gold/90 text-dark-green px-10 py-5 rounded-lg font-semibold flex items-center justify-center text-xl transition-colors"
               >
                 Chat With Us
-                <ArrowRight className="ml-2 w-5 h-5" />
+                <ArrowRight className="mx-auto w-3 h-6" />
               </a>
             </div>
-          </motion.div>
+          </div>
         </div>
       </section>
 
@@ -160,7 +138,7 @@ export default function LandingPage() {
                   height={600}
                   className="rounded-lg relative w-full h-auto object-cover" /* Added object-cover and shadow */
                 />
-                <div className="absolute bottom-20 left-4 right-4 bg-white/95 backdrop-blur-sm p-6 rounded-xl shadow-xl">
+                <div className="absolute bottom-20 left-2 right-2 bg-white/95 backdrop-blur-sm p-4 rounded-xl shadow-xl">
                   <h3 className="font-bold text-dark-green text-xl">Mr Bala Fransic</h3>
                   <p className="text-gray-600">Founder & Head Trader</p>
                 </div>
@@ -273,23 +251,31 @@ export default function LandingPage() {
         </div>
       </motion.section>
 
-      {/* CTA Section */}
+
+      {/* Footer Section with improved mobile alignment */}
       <motion.section
-        className="py-24 bg-dark-green text-white"
+        className="py-16 md:py-24 bg-dark-green text-white"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
       >
-        <div className="container mx-auto px-6 text-center">
-          <h2 className="text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
-          <p className="text-xl mb-8 max-w-2xl mx-auto">
-            Join our community of successful traders and take your first step towards financial freedom.
-          </p>
-          <button className="bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold flex items-center text-lg mx-auto transition-colors">
-            Start Your Journey Today
-            <ArrowRight className="ml-2 w-5 h-5" />
-          </button>
+        <div className="container mx-auto px-4 sm:px-6">
+          <div className="flex flex-col items-center text-center">
+            <h2 className="text-3xl sm:text-4xl font-bold mb-6">Ready to Transform Your Trading?</h2>
+            <p className="text-lg sm:text-xl mb-8 max-w-2xl mx-auto">
+              Join our community of successful traders and take your first step towards financial freedom.
+            </p>
+            <a
+              href="https://wa.me/2347011299203"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center w-full sm:w-auto bg-gold hover:bg-gold/90 text-dark-green px-8 py-4 rounded-lg font-semibold text-lg transition-colors"
+            >
+              <span>Start Your Journey Today</span>
+              <ArrowRight className="ml-2 w-5 h-5" />
+            </a>
+          </div>
         </div>
       </motion.section>
     </main>
