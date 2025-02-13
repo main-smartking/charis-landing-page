@@ -101,10 +101,14 @@ export default function LandingPage() {
                 href="https://wa.me/2347011299203"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full mx-auto sm:w-auto bg-gold hover:bg-gold/90 text-dark-green px-10 py-5 rounded-lg font-semibold flex items-center justify-center text-xl transition-colors"
+                className="w-full sm:w-auto bg-gold hover:bg-gold/90 text-dark-green 
+                  px-6 sm:px-8 py-3 sm:py-4 rounded-lg font-semibold 
+                  flex items-center justify-center gap-2 sm:gap-3
+                  text-base sm:text-lg transition-all duration-300
+                  hover:shadow-lg hover:-translate-y-0.5"
               >
                 Chat With Us
-                <ArrowRight className="mx-auto w-3 h-6" />
+                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </a>
             </div>
           </div>
